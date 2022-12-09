@@ -11,12 +11,11 @@ class CustomerService
 {
     public function getCustomers($filter)
     {
-        $customers = User::query()->all();
+        $customers = User::all();
 
         if (!empty($filter['keyword'])) {
             $customers->where(function ($query) use ($filter) {
-                $query->where('first_name', 'LIKE', '%' . $filter['keyword'] . '%')
-                    ->orWhere('last_name', 'LIKE', '%' . $filter['keyword'] . '%')
+                $query->where('name', 'LIKE', '%' . $filter['keyword'] . '%')
                     ->orWhere('email', 'LIKE', '%' . $filter['keyword'] . '%');
             });
         }

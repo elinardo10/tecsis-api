@@ -3,8 +3,6 @@
 namespace Database\Seeders;
 
 use App\Models\User;
-use App\V1\Product\Models\Product;
-use Carbon\Carbon;
 use Illuminate\Database\Seeder;
 
 class InvoiceTableSeeder extends Seeder

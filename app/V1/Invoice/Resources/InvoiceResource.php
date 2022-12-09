@@ -18,7 +18,7 @@ class InvoiceResource extends JsonResource
         return [
             'id'       => (integer) $this->id,
             'total'    => (float) $this->total,
-            'due_date' => (string) $this->first_due_date ? $this->first_due_date->toISOString() : '',
+            'due_date' => (string) $this->due_date->toISOString(),
             'customer' => new CustomerResource($this->whenLoaded('customer')),
         ];
     }
