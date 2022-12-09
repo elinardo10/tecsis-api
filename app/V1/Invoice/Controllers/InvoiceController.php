@@ -6,7 +6,7 @@ use App\Http\Controllers\Controller;
 use App\V1\Invoice\Models\Invoice;
 use App\V1\Invoice\Resources\InvoiceResource;
 use App\V1\Invoice\Services\InvoiceService;
-use App\V1\Invoices\Requests\InvoiceStoreRequest;
+use App\V1\Invoice\Requests\InvoiceStoreRequest;
 
 class InvoiceController extends Controller
 {

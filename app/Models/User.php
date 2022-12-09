@@ -66,6 +66,10 @@ class User extends Authenticatable
         return $this->hasMany(Product::class);
     }
 
+    public function hasProduct($customerId, $productId)
+    {
+        return $this->products()->where(['id' => $productId, 'user_id' => $customerId])->exists();
+    }
 
     public function invoices()
     {
